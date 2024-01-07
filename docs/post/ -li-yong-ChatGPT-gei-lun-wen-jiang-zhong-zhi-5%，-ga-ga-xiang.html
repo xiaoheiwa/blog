@@ -12,8 +12,9 @@
         else if(localStorage.getItem("meek_theme")=="light"){document.getElementsByTagName("html")[0].attributes.getNamedItem("data-color-mode").value="light";}
     </script>
     
-<meta name="description" content="童话是一种生活态度，仅此而已。">
-<title>小白不懂科技</title>
+<meta name="description" content=" 利用ChatGPT给论文降重至5%，嘎嘎香">
+<title> 利用ChatGPT给论文降重至5%，嘎嘎香</title>
+
 
 </head>
 <style>
@@ -24,125 +25,134 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </style>
 
 <style>
-.avatar {transition: 0.8s;width:64px;height:64px;}
-.avatar:hover{transform: scale(1.15) rotate(360deg);}
-#header h1 a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-family:Monaco;margin-left:8px;}
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
 .title-right{display:flex;margin:auto 0 0 auto;}
-.title-right button{margin-right:8px;padding:16px;}
-.title-right .circle{padding: 14px 16px;}
-
-.SideNav{min-width: 360px;}
-.SideNav-icon{margin-right: 16px}
-.SideNav-item .Label{color: #fff;margin-left:8px;}
-.d-flex{min-width:0;}
-.listTitle{overflow:hidden;white-space:nowrap;text-overflow: ellipsis;max-width: 100%;}
-.listLabels{white-space:nowrap;}
-.listLabels object{max-height:16px;max-width:24px;}
-
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
 @media (max-width: 600px) {
     body {padding: 8px;}
-    .avatar {width:40px;height:40px;}
-    .blogTitle{display:none;}
-    #buttonRSS{display:none;}
-    .LabelTime{display:none;}
+    .postTitle{font-size:24px;}
 }
 </style>
 
 
+
+
 <body>
     <div id="header">
-<h1>
-    <img src="https://xbbdkj.com/wp-content/uploads/2023/12/微信图片_20231125213535.jpg" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">小白不懂科技</a></h1>
+<h1 class="postTitle"> 利用ChatGPT给论文降重至5%，嘎嘎香</h1>
 <div class="title-right">
-    <a href="https://blog.xbbdkj.com/tag.html"><button id="buttonSearch" class="btn btn-invisible circle" title="搜索">
-        <svg class="octicon" width="16" height="16" >
-            <path id="pathSearch" fill-rule="evenodd"></path>
+
+    <a href="https://blog.xbbdkj.com"><button id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
         </svg>
     </button></a>
-    
-    <a href="https://blog.xbbdkj.com/rss.xml" target="_blank"><button id="buttonRSS" class="btn btn-invisible circle" title="RSS">
-        <svg class="octicon" width="16" height="16" >
-            <path id="pathRSS" fill-rule="evenodd"></path>
+
+    <a href="https://github.com/xiaoheiwa/blog/issues/6" target="_blank"><button class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
         </svg>
     </button></a>
-    <button class="btn btn-invisible circle" onclick="modeSwitch()" title="切换主题">
+
+    <button class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
     </button>
+
 </div>
 </div>
     <div id="content">
-<div style="margin-bottom: 16px;">童话是一种生活态度，仅此而已。</div>
-<nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/%20-li-yong-ChatGPT-gei-lun-wen-jiang-zhong-zhi-5%25%EF%BC%8C-ga-ga-xiang.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle"> 利用ChatGPT给论文降重至5%，嘎嘎香</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#f9d0c4"><object><a style="color:#fff" href="https://blog.xbbdkj.com/tag.html#教程">教程</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-07</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/xiang-xun-lian-yi-ge-hong-guan-shi-chang-de-%20GPTs%EF%BC%9F-bu-fang-shou-xia-zhe-%2028%20-fen-%202024%20-quan-qiu-zi-ben-shi-chang-zhan-wang-bao-gao.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">想训练一个宏观市场的 GPTs？不妨收下这 28 份 2024 全球资本市场展望报告</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#e99695"><object><a style="color:#fff" href="https://blog.xbbdkj.com/tag.html#resource">resource</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-07</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/GPT%20-shang-dian-de-zhong-yao-xing.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">GPT 商店的重要性</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#e99695"><object><a style="color:#fff" href="https://blog.xbbdkj.com/tag.html#blog">blog</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-06</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/yi-ge-chao-qing-liang-ji-ge-ren-bo-ke-cheng-xu.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">一个超轻量级个人博客程序</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#f9d0c4"><object><a style="color:#fff" href="https://blog.xbbdkj.com/tag.html#教程">教程</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-05</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/ru-he-tong-guo-github-da-jian-bo-ke-%EF%BC%9F.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">如何通过github搭建博客？</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#f9d0c4"><object><a style="color:#fff" href="https://blog.xbbdkj.com/tag.html#教程">教程</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-05</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/good.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">good</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#e99695"><object><a style="color:#fff" href="https://blog.xbbdkj.com/tag.html#blog">blog</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-01-05</span>
-    </div>
-</a>
-</nav>
+<div class="markdown-body" id="postBody">
+<h1>论文降重准备</h1>
+<h2>1. 注册和了解 ChatGPT</h2>
+<ul>
+<li><strong>注册 OpenAI 账户</strong>：
+<ul>
+<li>访问 <a href="https://openai.com" rel="nofollow">OpenAI 官网</a> 并注册一个账户，以便接入 ChatGPT API。</li>
+</ul>
+</li>
+<li><strong>了解 ChatGPT</strong>：
+<ul>
+<li>在使用前，熟悉 ChatGPT 的功能和使用方法，包括语法检查、句子生成、概率采样等。</li>
+</ul>
+</li>
+<li><strong>掌握指令技巧</strong>：
+<ul>
+<li>了解如何使用指令(prompt)技巧来引导 ChatGPT 生成特定内容。</li>
+</ul>
+</li>
+</ul>
+<h2>2. 查找参考资料</h2>
+<ul>
+<li>在论文撰写前，广泛查找参考资料，增加对论文主题的理解。</li>
+<li>调用 ChatGPT 提供的降重功能，如多重翻译、改写润色、续写等。</li>
+</ul>
+<h1>使用 ChatGPT 进行降重步骤</h1>
+<h2>1. 输入引导降重指令</h2>
+<ul>
+<li><strong>例子指令</strong>：<code class="notranslate">"请帮我降重以下文字"</code>。</li>
+</ul>
+<h2>2. 优化降重结果</h2>
+<ul>
+<li>改善降重质量：调整语序、替换同义词、增减修饰语。注意保持逻辑和连贯性。</li>
+</ul>
+<h2>3. 多重翻译降重</h2>
+<ul>
+<li>利用 ChatGPT 提供的多语言翻译，通过多次翻译降低重复性。</li>
+</ul>
+<h2>4. 改写润色降重</h2>
+<ul>
+<li>对文段进行润色改写，包括句子结构和词汇选择上的调整。</li>
+</ul>
+<h2>5. 续写降重</h2>
+<ul>
+<li>使用 ChatGPT 续写增加内容，加强独创性。</li>
+</ul>
+<h1>论文降重注意事项</h1>
+<h2>1. 避免瞎编风险</h2>
+<ul>
+<li>谨慎使用 ChatGPT，不要完全依赖 AI 降重。需人工复审。</li>
+</ul>
+<h2>2. 不用于查文献</h2>
+<ul>
+<li>ChatGPT 不适合查找文献内容。应使用传统的检索方法。</li>
+</ul>
+<h2>3. 注意提问方式</h2>
+<ul>
+<li>设定明确的降重指令，避免模糊导致不理想的降重结果。</li>
+</ul>
+<h1>ChatGPT 论文降重应用</h1>
+<ul>
+<li>
+<p><strong>降重工具</strong>：</p>
+<ul>
+<li>使用改写、翻译、续写等功能，降低重复率，提升质量。</li>
+<li>结合其他方法技巧如润色和扩展，以获得更好效果。</li>
+</ul>
+</li>
+<li>
+<p><strong>创作助手</strong>：</p>
+<ul>
+<li>辅助写作，提供灵感、校对、扩展论点等帮助。</li>
+<li>与 ChatGPT 对话交互获取新观点和证据，增加创新性。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>以上步骤和注意事项可以帮助用户有效利用 ChatGPT 进行论文降重，但需要结合个人实际情况和判断灵活应用。</p>
+<h2>使用工具</h2>
+<ul>
+<li><strong><a href="https://im.xbbdkj.com/" rel="nofollow">https://im.xbbdkj.com/</a></strong></li>
+</ul>
+</div>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://blog.xbbdkj.com"> 小白不懂科技 </a>
 <p><a href="https://beian.miit.gov.cn/" target="_blank">渝ICP备2023005979号</a>
@@ -195,19 +205,45 @@ console.log("\n %c Gmeek main %c https://github.com/Meekdai/Gmeek \n\n", "color:
 </script>
 
 <script>
-document.getElementById("pathSearch").setAttribute("d",IconList["search"]);
-document.getElementById("pathRSS").setAttribute("d",IconList["rss"]);
-iconTOP=document.getElementsByClassName("svgTop1");
-iconPost=document.getElementsByClassName("svgTop0");
-for(var i=0;i<iconTOP.length;i++){
-    iconTOP[i].setAttribute("d",IconList["upload"]);
-    iconTOP[i].parentNode.style.color="red";
-}
-for(var i=0;i<iconPost.length;i++){
-    iconPost[i].setAttribute("d",IconList["post"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","xiaoheiwa/blog");
+    script.setAttribute("issue-term","title");
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else{script.setAttribute("theme","github-light");}
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
 }
 
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
 
 </script>
+
+
+
 
 </html>
